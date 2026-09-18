@@ -1,119 +1,83 @@
- body{
-  background-color: #141414;
-	font-family:helvetica;
-  color: #fff;
-  text-align: center;
-	margin: .1%;
- }
- 
- /*Link Colors*/
- a:link{
-  color: #fff;
- }
- a:visited{
-  color: #ffffff;
- }
- a:hover{
-  color: #c0c0c0;
- }
-
- 
- .projects-header{
-  font-size: 40px;
-  margin: 1%;
-  margin-left: 3%;
-  text-align: left;
- }
- 
- .projects-footer{
-  font-size: 30px;
-  text-align: center;
-  
- }
-
-
- img{
-  width: 400px;
-  height: 400px;
- }
-
-
-/*Corner Borders*/
-.corner-border {
-  --b: 1.5px;   /* thickness of the border */
-  --c: rgb(255, 255, 255);   /* color of the border */
-  --w: 20px;  /* width of border */
-  
-
-  border: var(--b) solid #ffffff00; /* space for the border */
-  --_g: #e8e8e800 90deg,var(--c) 0;
-  --_p: var(--w) var(--w) border-box no-repeat;
-  background:
-    conic-gradient(from 90deg  at top    var(--b) left  var(--b),var(--_g)) 0    0    / var(--_p),
-    conic-gradient(from 180deg at top    var(--b) right var(--b),var(--_g)) 100% 0    / var(--_p),
-    conic-gradient(from 0deg   at bottom var(--b) left  var(--b),var(--_g)) 0    100% / var(--_p),
-    conic-gradient(from -90deg at bottom var(--b) right var(--b),var(--_g)) 100% 100% / var(--_p)
-    ;
-  
-  padding: 10px;
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
-
-.project-content{
-  padding: 10px;
-  background-color: #d8d8d8;
-  color: black;
-  display: grid;
-}
-
-.project-title{
-  margin: 10px;
-  margin-bottom: 0px;
-  font-size: 30px;
-  font-weight: 900;
-  text-align:left;
-}
-
-.project-description{
-  color: #272727;
-  margin-left: 10px;
-  margin-top: 5px;
-  font-size: 20px;
-  font-weight: 500;
-  text-align:left;
-}
-
-.project-item{
-  display: inline-block;
-  margin: 10px;
-  
-}
-
-.project-filler{
-  display: inline-block;
-  margin: 10px;
-  visibility: hidden;
-}
-
-.project-item:hover{
-  transform: scale(1.005);
-  background-color: #ffffff22;
-}
-
-.project-container{
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-hr{
+/* ===== Reset ===== */
+* {
+  box-sizing: border-box;
   margin: 0;
-  width: 100%;
+  padding: 0;
 }
 
-.projects-gallery{
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  overflow: hidden;
+  color: #f0f0f0;
+  background: #000000;
+  font-family: system-ui, sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 3.5rem;
+  padding: 0.75rem 1.25rem;
+  background: #000000;
+  border-bottom: 1px solid #2a2a2a;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo {
   display: grid;
-  
- }
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.brand-name {
+  font-size: 1.35rem;
+  font-weight: 600;
+}
+
+.download-actions {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.download-link {
+  padding: 0.6rem 1rem;
+  color: #000000;
+  background: #f0f0f0;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.download-link:hover {
+  background: #cccccc;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height:100%;
+  min-height: 0;
+  flex: 1;
+  border: 0;
+  background: #222222;
+}
